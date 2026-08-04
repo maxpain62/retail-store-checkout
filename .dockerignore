@@ -4,5 +4,3 @@ docker-compose.yml
 .gitignore
 chart
 scripts
-dist
-node_modules
