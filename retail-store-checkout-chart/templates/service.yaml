@@ -11,3 +11,18 @@ spec:
     - port: {{ .Values.containers.ports.containerPort }}
       targetPort: {{ .Values.containers.ports.containerPort }}
   type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.metadata.labels.app }}-redis-service
+  labels:
+    app: {{ .Values.metadata.labels.app }}-redis
+spec:
+  selector:
+    app: {{ .Values.metadata.labels.app }}-redis
+  type: ClusterIP
+  ports:
+    - port: 6379
+      protocol: TCP
+      name: redis-port
