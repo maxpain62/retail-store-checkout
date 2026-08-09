@@ -58,7 +58,8 @@ spec:
       app: {{ .Values.metadata.labels.app }}-redis
   template:
     metadata:
-      labels: {{ .Values.metadata.labels.app }}-redis
+      labels: 
+        app: {{ .Values.metadata.labels.app }}-redis
     spec:
       containers:
         - name: {{ .Values.metadata.labels.app }}-redis-containers
