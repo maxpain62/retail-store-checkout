@@ -7,4 +7,4 @@ metadata:
 data: 
   RETAIL_CHECKOUT_PERSISTENCE_PROVIDER: redis
   RETAIL_CHECKOUT_PERSISTENCE_REDIS_URL: redis://{{ .Values.metadata.labels.app }}-redis-service:6379 
-  RETAIL_CHECKOUT_ENDPOINTS_ORDERS: http://{{ .Values.metadata.labels.app }}-service:80 
+  RETAIL_CHECKOUT_ENDPOINTS_ORDERS: http://{{ .Values.metadata.labels.app }}-service:8080
