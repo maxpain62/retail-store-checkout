@@ -47,7 +47,7 @@ spec:
 ---
 apiVersion: apps/v1
 kind: Deployment
-metadtat:
+metadata:
   name: {{ .Values.metadata.labels.app }}-redis-deployment
   labels:
     app: {{ .Values.metadata.labels.app }}-redis
